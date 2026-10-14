@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NovaTech – Cloud, Data and AI for Modern Enterprises</title>
+  <meta name="description" content="NovaTech helps enterprises unify cloud infrastructure, data and AI on one secure platform. NovaTech is a fictional enterprise platform.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="NovaTech home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>NovaTech</span>
+      </a>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="nav-menu" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#solutions">Solutions</a></li>
+          <li><a href="#testimonials">Customers</a></li>
+          <li><a class="btn btn-small" href="#contact">Book a Demo</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero Section -->
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="hero-badge">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            Enterprise Cloud &amp; AI Platform
+          </div>
+          <h1>One secure platform for your cloud, data and AI.</h1>
+          <p class="lead">NovaTech connects the systems your teams already use, so decisions move from reports to action in minutes instead of weeks.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Book a demo</a>
+            <a class="text-link" href="#solutions">Explore solutions →</a>
+          </div>
+        </div>
+
+        <!-- Interactive Hero Dashboard Panel -->
+        <div class="hero-panel" role="region" aria-label="Interactive NovaTech platform dashboard simulation">
+          <div class="panel-top">
+            <div class="panel-dots" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <span class="panel-badge-live">Live telemetry</span>
+          </div>
+          <p class="panel-title">Platform health &amp; telemetry</p>
+          <div class="panel-metric">
+            <strong id="metric-uptime">99.99%</strong>
+            <span>system availability</span>
+          </div>
+
+          <div class="bars" id="telemetry-bars" aria-label="Query throughput chart">
+            <i style="height:45%" title="Node 1"></i>
+            <i style="height:62%" title="Node 2"></i>
+            <i style="height:50%" title="Node 3"></i>
+            <i style="height:78%" title="Node 4"></i>
+            <i style="height:65%" title="Node 5"></i>
+            <i style="height:88%" title="Node 6"></i>
+            <i style="height:95%" title="Node 7"></i>
+          </div>
+
+          <div class="panel-row">
+            <span>Average query latency</span>
+            <b id="metric-latency">1.2 s</b>
+          </div>
+          <div class="panel-row">
+            <span>Monthly cloud spend</span>
+            <b id="metric-spend">−18%</b>
+          </div>
+
+          <div class="panel-actions">
+            <button type="button" id="btn-simulate" class="btn-simulate">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+              <span>Simulate Optimization</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <h2 id="features-title">Built for teams that cannot afford downtime</h2>
+        <p class="section-intro">Three foundations sit behind everything NovaTech delivers.</p>
+        <div class="card-grid cols-3">
+          <article class="card">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/></svg>
+            <h3>Security by default</h3>
+            <p>Encryption, role-based access control, and comprehensive audit trails are switched on from day one, not added later.</p>
+          </article>
+          <article class="card">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>
+            <h3>Fast at any scale</h3>
+            <p>Workloads scale automatically, ensuring month-end financial reconciliations run as quickly as a normal Tuesday morning.</p>
+          </article>
+          <article class="card">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><path d="M8.7 10.5l6.6-3M8.7 13.5l6.6 3"/></svg>
+            <h3>Connects to your tools</h3>
+            <p>Ready-made enterprise connectors link your ERP, CRM, and modern data warehouses without brittle custom integration projects.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section section-tint" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div>
+          <h2 id="about-title">Technology should simplify work, not add to it</h2>
+          <p>NovaTech was founded to end the patchwork of disconnected tools that slows large organisations down. We design, migrate and run the cloud, data and AI systems that modern enterprises depend on every day.</p>
+          <p>Our engineers work alongside your teams from first technical workshop to live production operation, and we measure our success by what changes for your end customers.</p>
+        </div>
+        <dl class="stats" aria-label="Key performance metrics">
+          <div><dt>Enterprise customers</dt><dd>480+</dd></div>
+          <div><dt>Countries served</dt><dd>32</dd></div>
+          <div><dt>Global support coverage</dt><dd>24/7</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Solutions Section with Interactive Filter -->
+    <section class="section section-dark" id="solutions" aria-labelledby="solutions-title">
+      <div class="container">
+        <h2 id="solutions-title">Solutions for every stage of your journey</h2>
+        <p class="section-intro">Start with one service or combine them into a single enterprise transformation programme.</p>
+        
+        <!-- Category Filter Pills -->
+        <div class="filter-pills" role="tablist" aria-label="Filter solutions by domain">
+          <button type="button" class="filter-btn is-active" data-filter="all" role="tab" aria-selected="true">All Solutions</button>
+          <button type="button" class="filter-btn" data-filter="cloud" role="tab" aria-selected="false">Cloud</button>
+          <button type="button" class="filter-btn" data-filter="data" role="tab" aria-selected="false">Data</button>
+          <button type="button" class="filter-btn" data-filter="ai" role="tab" aria-selected="false">AI</button>
+          <button type="button" class="filter-btn" data-filter="security" role="tab" aria-selected="false">Security</button>
+        </div>
+
+        <div class="card-grid cols-4" id="solutions-grid">
+          <article class="card card-dark solution-card" data-category="cloud">
+            <span class="solution-tag">Cloud</span>
+            <h3>Cloud migration</h3>
+            <p>Move legacy enterprise applications to modern cloud architectures with automated testing and zero surprise downtime.</p>
+          </article>
+          <article class="card card-dark solution-card" data-category="data">
+            <span class="solution-tag">Data</span>
+            <h3>Data platform</h3>
+            <p>Bring scattered, siloed databases into a unified governed warehouse that every analytics and BI team can trust.</p>
+          </article>
+          <article class="card card-dark solution-card" data-category="ai">
+            <span class="solution-tag">AI</span>
+            <h3>Applied AI</h3>
+            <p>Turn forecasting, semantic search, and document automation proofs-of-concept into hardened production microservices.</p>
+          </article>
+          <article class="card card-dark solution-card" data-category="security">
+            <span class="solution-tag">Security</span>
+            <h3>Managed security</h3>
+            <p>Round-the-clock proactive monitoring, vulnerability management, and threat response from our dedicated DevSecOps team.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section" id="testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <h2 id="testimonials-title">What our customers say</h2>
+        <p class="section-intro">Sample testimonials from fictional enterprise customers, for demonstration only.</p>
+        <div class="card-grid cols-3">
+          <figure class="card quote">
+            <blockquote><p>We moved 200 applications in one quarter and our engineering teams barely noticed the switch.</p></blockquote>
+            <figcaption><b>Amelia Hart</b>Chief Technology Officer, Brightwell Logistics (fictional)</figcaption>
+          </figure>
+          <figure class="card quote">
+            <blockquote><p>Reports that took three days now take minutes, and finance finally trusts the unified numbers.</p></blockquote>
+            <figcaption><b>Daniel Okafor</b>Head of Data, Meridian Retail (fictional)</figcaption>
+          </figure>
+          <figure class="card quote">
+            <blockquote><p>The NovaTech security team found issues we had missed for years, then fixed them with our internal team.</p></blockquote>
+            <figcaption><b>Priya Raman</b>Security Director, Altura Health (fictional)</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section with Functional Demo Request Form -->
+    <section class="section section-tint" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-box">
+        <div class="contact-info">
+          <h2 id="contact-title">Talk to our enterprise team</h2>
+          <p>Tell us what your organization is looking to build, migrate, or secure. We'll schedule a tailored technical session within one business day.</p>
+          
+          <ul class="contact-channels">
+            <li>
+              <strong>Direct inquiries:</strong>
+              <a class="text-link" href="mailto:hello@novatech.example">hello@novatech.example</a>
+            </li>
+            <li>
+              <strong>Global headquarters:</strong>
+              <span>One Tech Plaza, Suite 400 (Fictional address)</span>
+            </li>
+          </ul>
+
+          <div class="social-links-row">
+            <a class="social-pill" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn (demo)</a>
+            <a class="social-pill" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub (demo)</a>
+            <a class="social-pill" href="https://x.com/" target="_blank" rel="noopener noreferrer">X (demo)</a>
+          </div>
+        </div>
+
+        <!-- Interactive Demo Request Form -->
+        <div class="card contact-form-card">
+          <h3>Request a platform consultation</h3>
+          <p class="form-subtext">Fill out the brief form below and our architecture team will get back to you.</p>
+
+          <form id="demo-form" novalidate>
+            <div class="form-group">
+              <label for="demo-name">Full name <span aria-hidden="true">*</span></label>
+              <input type="text" id="demo-name" name="name" required placeholder="Alex Mercer" autocomplete="name">
+            </div>
+
+            <div class="form-group">
+              <label for="demo-email">Work email <span aria-hidden="true">*</span></label>
+              <input type="email" id="demo-email" name="email" required placeholder="alex@company.com" autocomplete="email">
+            </div>
+
+            <div class="form-group">
+              <label for="demo-solution">Primary area of interest</label>
+              <select id="demo-solution" name="solution">
+                <option value="cloud">Cloud Migration &amp; Infrastructure</option>
+                <option value="data">Unified Data Platform</option>
+                <option value="ai">Applied Enterprise AI</option>
+                <option value="security">Managed Security &amp; Compliance</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="demo-message">Project goals or questions</label>
+              <textarea id="demo-message" name="message" rows="3" placeholder="Briefly describe your workload or migration timeline..."></textarea>
+            </div>
+
+            <button type="submit" id="demo-submit-btn" class="btn btn-primary btn-block">Schedule Consultation</button>
+
+            <div id="demo-feedback" class="form-feedback" role="alert" aria-live="polite" hidden></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <a class="brand" href="#top" aria-label="Back to top">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>NovaTech</span>
+        </a>
+        <nav aria-label="Footer navigation">
+          <ul class="footer-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#solutions">Solutions</a></li>
+            <li><a href="#testimonials">Customers</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#top">Back to top ↑</a></li>
+          </ul>
+        </nav>
+      </div>
+      <p class="copyright">&copy; 2026 NovaTech. A fictional enterprise company created for a modern web development showcase.</p>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top of page" title="Back to top">↑</button>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

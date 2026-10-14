@@ -1,0 +1,2079 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Primary Meta Tags -->
+  <title>Muhammad Shoaib | Aspiring Machine Learning Engineer & BSCS Student</title>
+  <meta name="title" content="Muhammad Shoaib | Aspiring Machine Learning Engineer & BSCS Student">
+  <meta name="description"
+    content="Personal portfolio of Muhammad Shoaib — Aspiring Machine Learning Engineer, BSCS student at University of Education Lahore (CGPA 3.86/4.00), and AI & Data Science enthusiast.">
+  <meta name="keywords"
+    content="Muhammad Shoaib, Machine Learning Engineer, BSCS, Artificial Intelligence, Data Science, Python, RAG, Groq API, Computer Science Portfolio">
+  <meta name="author" content="Muhammad Shoaib">
+  <meta name="theme-color" content="#060913">
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/MuhammadShoaib">
+  <meta property="og:title" content="Muhammad Shoaib | Aspiring Machine Learning Engineer">
+  <meta property="og:description"
+    content="BSCS student with strong interest in AI, ML, Data Science, and Software Development. Skilled in Python, SQL, RAG, and intelligent simulators.">
+  <meta property="og:image" content="assets/og-preview.png">
+
+  <!-- Twitter Meta -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Muhammad Shoaib | Aspiring Machine Learning Engineer">
+  <meta property="twitter:description"
+    content="BSCS student with strong interest in AI, ML, Data Science, and Software Development.">
+
+  <!-- Favicon / Brand Icon (SVG Data URI) -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b1329'/%3E%3Cpath d='M8 22V10l5 7 5-7v12M22 13.5c0-1.5 1-2.5 2.5-2.5s2.5 1 2.5 2.5-1 2-2.5 2.5l-1 .3c-1.5.5-2.5 1.2-2.5 2.7 0 1.7 1.3 3 3 3s3-1.3 3-3' fill='none' stroke='%2338bdf8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Screen Reader Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ==================== HEADER & NAVIGATION ==================== -->
+  <header class="site-header" id="header" role="banner">
+    <div class="container header-container">
+      <!-- Brand Logo / Monogram -->
+      <a href="#home" class="brand-logo" aria-label="Muhammad Shoaib - Return to top">
+        <div class="logo-symbol" aria-hidden="true">
+          <span class="logo-accent">MS</span>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">Muhammad Shoaib</span>
+          <span class="logo-tagline">Aspiring ML Engineer</span>
+        </div>
+      </a>
+      <img src="" alt="">
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#achievements" class="nav-link">Achievements</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action Buttons -->
+      <div class="header-actions">
+        <button id="cvDownloadBtn" class="btn btn-outline btn-sm btn-cv"
+          aria-label="Download Muhammad Shoaib's Curriculum Vitae">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span>Download CV</span>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobileMenuBtn" class="mobile-toggle" aria-expanded="false" aria-controls="mobileMenu"
+          aria-label="Toggle navigation menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="mobile-nav-drawer" aria-hidden="true">
+      <div class="mobile-nav-inner">
+        <div class="mobile-nav-header">
+          <div class="brand-logo">
+            <div class="logo-symbol" aria-hidden="true"><span class="logo-accent">MS</span></div>
+            <div class="logo-text">
+              <span class="logo-name">Muhammad Shoaib</span>
+              <span class="logo-tagline">Navigation</span>
+            </div>
+          </div>
+          <button id="mobileCloseBtn" class="btn-icon-close" aria-label="Close navigation menu">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <ul class="mobile-nav-list">
+          <li><a href="#home" class="mobile-nav-link">Home</a></li>
+          <li><a href="#about" class="mobile-nav-link">About</a></li>
+          <li><a href="#education" class="mobile-nav-link">Education</a></li>
+          <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+          <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+          <li><a href="#achievements" class="mobile-nav-link">Achievements</a></li>
+          <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        </ul>
+        <div class="mobile-nav-footer">
+          <button id="mobileCvBtn" class="btn btn-primary btn-block">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span>Download CV</span>
+          </button>
+          <div class="mobile-contact-snippet">
+            <a href="mailto:shoaibbhatti1838@gmail.com" class="mobile-snippet-link">shoaibbhatti1838@gmail.com</a>
+            <a href="tel:03043952011" class="mobile-snippet-link">03043952011</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main id="main-content" role="main">
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="home" class="hero-section section-padding" aria-label="Hero Introduction">
+      <!-- Ambient Background Glows -->
+      <div class="hero-bg-glow hero-bg-glow-1" aria-hidden="true"></div>
+      <div class="hero-bg-glow hero-bg-glow-2" aria-hidden="true"></div>
+      <div class="hero-grid-pattern" aria-hidden="true"></div>
+
+      <div class="container hero-container">
+        <!-- Hero Text Content (Left Column) -->
+        <div class="hero-content">
+          <!-- Availability / Status Tag -->
+          <div class="status-pill" id="heroStatusBadge">
+            <span class="status-dot pulse" aria-hidden="true"></span>
+            <span class="status-text">Available for Internships &amp; AI Collaborations</span>
+          </div>
+
+          <!-- Professional Titles -->
+          <div class="hero-title-group">
+            <span class="hero-greeting">Hello, I'm</span>
+            <h1 class="hero-name">Muhammad Shoaib</h1>
+            <p class="hero-role-headline">
+              <span class="text-gradient">Aspiring Web Developer &amp; AI Engineer</span>
+            </p>
+            <p class="hero-supporting-title">BSCS Student | Web Developer &amp; AI Enthusiast</p>
+          </div>
+
+          <!-- Profile Introduction Quote -->
+          <blockquote class="hero-bio">
+            &ldquo;Passionate and highly motivated BSCS student with strong interest in Artificial Intelligence, Machine
+            Learning, Data Science, and Software Development. Skilled in developing AI-powered educational systems,
+            intelligent simulators, and automation solutions using Python, SQL, and modern technologies. Quick learner
+            with strong problem-solving abilities and a passion for building innovative real-world software
+            applications.&rdquo;
+          </blockquote>
+
+          <!-- Quick Verified Contact Pills -->
+          <div class="hero-contact-strip" aria-label="Direct Contact Details">
+            <a href="mailto:shoaibbhatti1838@gmail.com" class="contact-pill" title="Send email to Muhammad Shoaib">
+              <svg class="pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+              <span>shoaibbhatti1838@gmail.com</span>
+            </a>
+            <a href="tel:03043952011" class="contact-pill" title="Call Muhammad Shoaib">
+              <svg class="pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+              <span>03043952011</span>
+            </a>
+            <span class="contact-pill location-pill" title="Geographic Location">
+              <svg class="pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Muzaffargarh, Punjab, Pakistan</span>
+            </span>
+          </div>
+
+          <!-- Hero Action Buttons -->
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary btn-glow">
+              <span>Explore My Projects</span>
+              <svg class="btn-icon-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span>Contact Me</span>
+              <svg class="btn-icon-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 2L11 13"></path>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Visual / Monogram Card (Right Column) -->
+        <div class="hero-visual" aria-label="Visual identity card">
+          <div class="tech-profile-card">
+            <!-- Decorative enterprise corner accents -->
+            <div class="corner-bracket top-left" aria-hidden="true"></div>
+            <div class="corner-bracket top-right" aria-hidden="true"></div>
+            <div class="corner-bracket bottom-left" aria-hidden="true"></div>
+            <div class="corner-bracket bottom-right" aria-hidden="true"></div>
+
+            <div class="tech-card-inner">
+              <!-- Visual Monogram Avatar -->
+              <div class="avatar-wrapper">
+                <div class="avatar-ring-outer" aria-hidden="true"></div>
+                <div class="avatar-ring-pulse" aria-hidden="true"></div>
+
+                <div class="avatar-container" id="profileVisualSlot">
+                  <img src="assets/profile.jpg" alt="Muhammad Shoaib - Aspiring Machine Learning Engineer" class="profile-photo" width="220" height="220" loading="eager" fetchpriority="high">
+                </div>
+
+                <div class="avatar-badge-tag" title="Verified Academic Excellence">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  <span>CGPA 3.86</span>
+                </div>
+              </div>
+
+              <!-- Identity Sub-panel -->
+              <div class="card-identity-block">
+                <h2 class="card-identity-name">Muhammad Shoaib</h2>
+                <p class="card-identity-role">BSCS &bull; Class of 2024–2028</p>
+                <p class="card-identity-institution">University of Education Lahore</p>
+              </div>
+
+              <!-- Telemetry Metrics Strip -->
+              <div class="card-metrics-grid">
+                <div class="metric-item">
+                  <span class="metric-value text-cyan">3.86<span class="metric-unit">/4.0</span></span>
+                  <span class="metric-label">Current CGPA</span>
+                </div>
+                <div class="metric-divider" aria-hidden="true"></div>
+                <div class="metric-item">
+                  <span class="metric-value text-blue">6</span>
+                  <span class="metric-label">Core Projects</span>
+                </div>
+                <div class="metric-divider" aria-hidden="true"></div>
+                <div class="metric-item">
+                  <span class="metric-value text-emerald">2</span>
+                  <span class="metric-label">Merit Awards</span>
+                </div>
+              </div>
+
+              <!-- Quick Technology Chips -->
+              <div class="card-tech-chips" aria-label="Key Technologies">
+                <span class="tech-chip">Python</span>
+                <span class="tech-chip">RAG</span>
+                <span class="tech-chip">Algorithms</span>
+                <span class="tech-chip">Streamlit</span>
+                <span class="tech-chip">Groq API</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT ME SECTION ==================== -->
+    <section id="about" class="about-section section-padding" aria-labelledby="about-heading">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header text-center">
+          <span class="section-eyebrow">Academic &amp; Engineering Profile</span>
+          <h2 id="about-heading" class="section-title">About Me</h2>
+          <div class="section-title-line" aria-hidden="true"></div>
+          <p class="section-subtitle">
+            An authentic student-developer perspective grounded in computer science fundamentals and driven by the
+            potential of applied machine learning.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- About Narrative -->
+          <div class="about-narrative">
+            <div class="narrative-card">
+              <h3 class="narrative-heading">
+                <svg class="heading-icon text-cyan" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="16" x2="12" y2="12"></line>
+                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                <span>My Journey &amp; Engineering Philosophy</span>
+              </h3>
+              <p class="narrative-paragraph">
+                I am a dedicated Bachelor of Science in Computer Science (BSCS) student at the <strong>University of
+                  Education Lahore (Multan Campus)</strong>. My academic journey is fueled by a profound passion for
+                <strong>Artificial Intelligence, Machine Learning, Data Science, Software Development,</strong> and
+                <strong>Educational Technology</strong>.
+              </p>
+              <p class="narrative-paragraph">
+                Rather than treating AI as a buzzword, I enjoy building practical, functional software solutions: from
+                <strong>AI-powered educational assistants</strong> that demystify coding concepts to <strong>intelligent
+                  problem-solving simulators</strong> implementing classic backtracking and constraint satisfaction
+                algorithms.
+              </p>
+              <p class="narrative-paragraph">
+                I believe in disciplined problem solving, strong algorithmic foundations, and writing clean,
+                maintainable code using Python, SQL, and web technologies. My goal is to continually sharpen my
+                technical abilities and contribute meaningfully as an aspiring Machine Learning Engineer.
+              </p>
+
+              <!-- Authentic Focus Areas -->
+              <div class="about-focus-areas">
+                <h4 class="focus-title">Core Areas of Focus</h4>
+                <div class="focus-tags">
+                  <span class="focus-tag">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="tag-icon">
+                      <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                      <polyline points="2 17 12 22 22 17"></polyline>
+                      <polyline points="2 12 12 17 22 12"></polyline>
+                    </svg>
+                    Applied Artificial Intelligence
+                  </span>
+                  <span class="focus-tag">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="tag-icon">
+                      <circle cx="12" cy="12" r="3"></circle>
+                      <path
+                        d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                      </path>
+                    </svg>
+                    Intelligent Problem Solvers &amp; Simulators
+                  </span>
+                  <span class="focus-tag">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="tag-icon">
+                      <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"></path>
+                      <path d="M6 6h10"></path>
+                      <path d="M6 10h10"></path>
+                    </svg>
+                    Educational Technology (EdTech)
+                  </span>
+                  <span class="focus-tag">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="tag-icon">
+                      <polyline points="16 18 22 12 16 6"></polyline>
+                      <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                    Software Development &amp; Automation
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Professional Information Panel (Right Column) -->
+          <div class="about-sidebar">
+            <div class="info-card">
+              <div class="info-card-header">
+                <div class="info-icon-badge">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="info-card-title">Academic Profile</h3>
+                  <p class="info-card-subtitle">Verified University Credentials</p>
+                </div>
+              </div>
+
+              <div class="info-rows-list">
+                <!-- Degree -->
+                <div class="info-row">
+                  <span class="info-label">Degree</span>
+                  <span class="info-value">Bachelor of Science in Computer Science (BSCS)</span>
+                </div>
+
+                <!-- University -->
+                <div class="info-row">
+                  <span class="info-label">University</span>
+                  <span class="info-value">University of Education Lahore, Multan Campus</span>
+                </div>
+
+                <!-- Academic Standing / CGPA -->
+                <div class="info-row highlight-row">
+                  <span class="info-label">Current CGPA</span>
+                  <span class="info-value text-cyan fw-bold">3.86 / 4.00</span>
+                </div>
+
+                <!-- Location -->
+                <div class="info-row">
+                  <span class="info-label">Location</span>
+                  <span class="info-value">Muzaffargarh, Punjab, Pakistan</span>
+                </div>
+
+                <!-- Email -->
+                <div class="info-row">
+                  <span class="info-label">Email</span>
+                  <a href="mailto:shoaibbhatti1838@gmail.com" class="info-link">shoaibbhatti1838@gmail.com</a>
+                </div>
+
+                <!-- Phone -->
+                <div class="info-row">
+                  <span class="info-label">Phone</span>
+                  <a href="tel:03043952011" class="info-link">03043952011</a>
+                </div>
+              </div>
+
+              <!-- Quick Action Inside Info Card -->
+              <div class="info-card-footer">
+                <a href="#education" class="btn btn-outline btn-sm btn-block">
+                  <span>View Education Timeline</span>
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== EDUCATION SECTION ==================== -->
+    <section id="education" class="education-section section-padding bg-alt" aria-labelledby="education-heading">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header text-center">
+          <span class="section-eyebrow">Academic Milestones</span>
+          <h2 id="education-heading" class="section-title">Education</h2>
+          <div class="section-title-line" aria-hidden="true"></div>
+          <p class="section-subtitle">
+            Consistent record of academic excellence from high school through university computer science studies.
+          </p>
+        </div>
+
+        <!-- Vertical Education Timeline -->
+        <div class="timeline-wrapper">
+          <div class="timeline-track" aria-hidden="true"></div>
+
+          <!-- Entry 1: BSCS -->
+          <div class="timeline-item current-milestone">
+            <div class="timeline-marker" aria-hidden="true">
+              <span class="marker-dot"></span>
+              <span class="marker-pulse"></span>
+            </div>
+
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div class="timeline-title-area">
+                  <div class="badge-pill badge-primary">Current Degree</div>
+                  <h3 class="timeline-degree">Bachelor of Science in Computer Science (BSCS)</h3>
+                  <h4 class="timeline-institution">University of Education Lahore, Multan Campus</h4>
+                </div>
+                <div class="timeline-meta">
+                  <span class="meta-date">
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                      <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    August 2024 &ndash; Present
+                  </span>
+                  <span class="meta-location">
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    Multan, Pakistan
+                  </span>
+                </div>
+              </div>
+
+              <div class="timeline-body">
+                <div class="grade-banner">
+                  <span class="grade-label">Cumulative GPA:</span>
+                  <span class="grade-value text-cyan">3.86 / 4.00</span>
+                  <span class="grade-note">(Top-tier Academic Standing)</span>
+                </div>
+                <p class="timeline-description">
+                  Focused on computer science fundamentals, data structures, algorithms, problem-solving techniques,
+                  database systems, and applied AI. Actively engaged in algorithmic simulator implementations, RAG
+                  systems, and AI classroom applications.
+                </p>
+                <div class="timeline-tags">
+                  <span class="edu-tag">Algorithms</span>
+                  <span class="edu-tag">Data Structures</span>
+                  <span class="edu-tag">AI &amp; Heuristics</span>
+                  <span class="edu-tag">Database Systems</span>
+                  <span class="edu-tag">Software Development</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Entry 2: FSc Pre-Engineering -->
+          <div class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true">
+              <span class="marker-dot"></span>
+            </div>
+
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div class="timeline-title-area">
+                  <div class="badge-pill badge-neutral">Higher Secondary</div>
+                  <h3 class="timeline-degree">FSc Pre-Engineering</h3>
+                  <h4 class="timeline-institution">Government Graduate College Muzaffargarh</h4>
+                </div>
+                <div class="timeline-meta">
+                  <span class="meta-date">
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                      <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    2021 &ndash; 2023
+                  </span>
+                  <span class="meta-location">
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    Muzaffargarh, Pakistan
+                  </span>
+                </div>
+              </div>
+
+              <div class="timeline-body">
+                <div class="grade-banner">
+                  <span class="grade-label">Academic Result:</span>
+                  <span class="grade-value text-blue">917 / 1100 Marks</span>
+                  <span class="grade-note">(83.36% &bull; Grade A)</span>
+                </div>
+                <p class="timeline-description">
+                  Rigorous foundation in advanced mathematics, analytical reasoning, physics, and scientific principles,
+                  providing the mathematical depth essential for machine learning and algorithm design.
+                </p>
+                <div class="timeline-tags">
+                  <span class="edu-tag">Calculus &amp; Algebra</span>
+                  <span class="edu-tag">Analytical Reasoning</span>
+                  <span class="edu-tag">Physics</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Entry 3: Matriculation -->
+          <div class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true">
+              <span class="marker-dot"></span>
+            </div>
+
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div class="timeline-title-area">
+                  <div class="badge-pill badge-neutral">Secondary School</div>
+                  <h3 class="timeline-degree">Matriculation &mdash; Computer Science</h3>
+                  <h4 class="timeline-institution">Government High School Talkot</h4>
+                </div>
+                <div class="timeline-meta">
+                  <span class="meta-date">
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                      <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    2019 &ndash; 2021
+                  </span>
+                  <span class="meta-location">
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    Muzaffargarh, Pakistan
+                  </span>
+                </div>
+              </div>
+
+              <div class="timeline-body">
+                <div class="grade-banner">
+                  <span class="grade-label">Academic Result:</span>
+                  <span class="grade-value text-emerald">1096 / 1100 Marks</span>
+                  <span class="grade-note">(99.64% &bull; Grade A+)</span>
+                </div>
+                <p class="timeline-description">
+                  Near-perfect secondary school score demonstrating strong work ethic, academic discipline, and early
+                  passion for computer science concepts.
+                </p>
+                <div class="timeline-tags">
+                  <span class="edu-tag">Computer Science</span>
+                  <span class="edu-tag">Mathematics</span>
+                  <span class="edu-tag">Science Foundations</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SKILLS SECTION ==================== -->
+    <section id="skills" class="skills-section section-padding" aria-labelledby="skills-heading">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header text-center">
+          <span class="section-eyebrow">Technical Competencies</span>
+          <h2 id="skills-heading" class="section-title">Technical &amp; Professional Skills</h2>
+          <div class="section-title-line" aria-hidden="true"></div>
+          <p class="section-subtitle">
+            Hands-on technical capabilities utilized directly across coursework, intelligent simulators, and AI
+            projects.
+          </p>
+        </div>
+
+        <!-- Honest Representation Banner -->
+        <div class="honesty-banner">
+          <svg viewBox="0 0 24 24" class="honesty-icon" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            <polyline points="9 12 11 14 15 10"></polyline>
+          </svg>
+          <p class="honesty-text">
+            <strong>Authentic Skill Representation:</strong> Listed technologies and algorithms reflect practical
+            hands-on application in real academic and software projects. Free from artificial percentage meters or
+            unverified claims.
+          </p>
+        </div>
+
+        <!-- Skills Filter Tabs -->
+        <div class="skills-tab-bar" role="tablist" aria-label="Skills Category Filter">
+          <button class="skills-tab-btn active" role="tab" aria-selected="true" data-category="all">All Skills</button>
+          <button class="skills-tab-btn" role="tab" aria-selected="false" data-category="programming">Programming &amp;
+            Dev</button>
+          <button class="skills-tab-btn" role="tab" aria-selected="false" data-category="ai">AI &amp; Problem
+            Solving</button>
+          <button class="skills-tab-btn" role="tab" aria-selected="false"
+            data-category="professional">Professional</button>
+        </div>
+
+        <!-- Skills Grid Container -->
+        <div class="skills-category-wrapper">
+
+          <!-- Category 1: Programming and Development -->
+          <div class="skill-category-block" data-category-group="programming">
+            <div class="category-title-strip">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+              <h3>Programming &amp; Development</h3>
+              <span class="category-count">6 Technologies</span>
+            </div>
+
+            <div class="skills-grid">
+              <!-- Python -->
+              <div class="skill-card">
+                <div class="skill-icon-box">
+                  <svg viewBox="0 0 24 24" class="skill-svg" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 9V5a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v3a3 3 0 0 0 3 3h6"></path>
+                    <path d="M12 15v4a3 3 0 0 0 3 3h3a3 3 0 0 0 3-3v-3a3 3 0 0 0-3-3h-6"></path>
+                    <circle cx="7.5" cy="5.5" r="1" fill="currentColor"></circle>
+                    <circle cx="16.5" cy="18.5" r="1" fill="currentColor"></circle>
+                  </svg>
+                </div>
+                <div class="skill-info">
+                  <h4 class="skill-name">Python</h4>
+                  <p class="skill-context">Core language for AI, data scripts, &amp; Streamlit apps</p>
+                </div>
+                <span class="skill-badge">Project Verified</span>
+              </div>
+
+              <!-- Java -->
+              <div class="skill-card">
+                <div class="skill-icon-box">
+                  <svg viewBox="0 0 24 24" class="skill-svg" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 18h12"></path>
+                    <path d="M8 21h8"></path>
+                    <path d="M18 9c0 4-3 7-6 7s-6-3-6-7V4h12v5z"></path>
+                    <line x1="18" y1="7" x2="21" y2="7"></line>
+                    <path d="M21 7a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-1"></path>
+                  </svg>
+                </div>
+                <div class="skill-info">
+                  <h4 class="skill-name">Java</h4>
+                  <p class="skill-context">Object-oriented programming &amp; CS coursework</p>
+                </div>
+                <span class="skill-badge">Coursework</span>
+              </div>
+
+              <!-- Basic SQL -->
+              <div class="skill-card">
+                <div class="skill-icon-box">
+                  <svg viewBox="0 0 24 24" class="skill-svg" fill="none" stroke="currentColor" stroke-width="2">
+                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                  </svg>
+                </div>
+                <div class="skill-info">
+                  <h4 class="skill-name">Basic SQL</h4>
+                  <p class="skill-context">Relational queries, schema design &amp; data retrieval</p>
+                </div>
+                <span class="skill-badge">Coursework</span>
+              </div>
+
+              <!-- HTML -->
+              <div class="skill-card">
+                <div class="skill-icon-box">
+                  <svg viewBox="0 0 24 24" class="skill-svg" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="4 2 20 2 18.5 19 12 22 5.5 19 4 2"></polygon>
+                    <polyline points="8 7 16 7 15.5 11 8.5 11"></polyline>
+                    <polyline points="15 15 12 16 9 15 8.7 13"></polyline>
+                  </svg>
+                </div>
+                <div class="skill-info">
+                  <h4 class="skill-name">HTML</h4>
+                  <p class="skill-context">Semantic structuring for web apps &amp; AI dashboards</p>
+                </div>
+                <span class="skill-badge">Project Verified</span>
+              </div>
+
+              <!-- CSS -->
+              <div class="skill-card">
+                <div class="skill-icon-box">
+                  <svg viewBox="0 0 24 24" class="skill-svg" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="4 2 20 2 18.5 19 12 22 5.5 19 4 2"></polygon>
+                    <path d="M8 8h8l-.5 4H8.5l.3 4 3.2.9 3.2-.9.2-2"></path>
+                  </svg>
+                </div>
+                <div class="skill-info">
+                  <h4 class="skill-name">CSS</h4>
+                  <p class="skill-context">Modern responsive styling, Flexbox &amp; CSS Grid</p>
+                </div>
+                <span class="skill-badge">Project Verified</span>
+              </div>
+
+              <!-- JavaScript -->
+              <div class="skill-card">
+                <div class="skill-icon-box">
+                  <svg viewBox="0 0 24 24" class="skill-svg" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                    <path d="M8 17c0-2 1.5-3 3-3"></path>
+                    <path d="M14 17c1.5 0 2.5-1 2.5-2.5 0-2-2.5-2-2.5-3.5 0-.8.7-1.5 1.5-1.5"></path>
+                  </svg>
+                </div>
+                <div class="skill-info">
+                  <h4 class="skill-name">JavaScript</h4>
+                  <p class="skill-context">Client-side logic &amp; API integration in projects</p>
+                </div>
+                <span class="skill-badge">Project Verified</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: AI and Problem Solving -->
+          <div class="skill-category-block" data-category-group="ai">
+            <div class="category-title-strip">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M12 2a8 8 0 0 0-8 8c0 3.3 2 6.2 5 7.4V20a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2.6c3-1.2 5-4.1 5-7.4a8 8 0 0 0-8-8z">
+                </path>
+                <line x1="9" y1="13" x2="15" y2="13"></line>
+              </svg>
+              <h3>AI &amp; Problem Solving</h3>
+              <span class="category-count">7 Competencies</span>
+            </div>
+
+            <div class="skills-grid">
+              <!-- Prompt Engineering -->
+              <div class="skill-card">
+                <div class="skill-icon-box">
+                  <svg viewBox="0 0 24 24" class="skill-svg" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    <line x1="8" y1="9" x2="16" y2="9"></line>
+                    <line x1="8" y1="13" x2="14" y2="13"></line>
+                  </svg>
+                </div>
+                <div class="skill-info">
+                  <h4 class="skill-name">Prompt Engineering</h4>
+                  <p class="skill-context">Structured system prompts &amp; LLM context orchestration</p>
+                </div>
+                <span class="skill-badge">Applied in Projects</span>
+              </div>
+
+              <!-- Problem-Solving Algorithms -->
+              <div class="skill-card">
+                <div class="skill-icon-box">
+                  <svg viewBox="0 0 24 24" class="skill-svg" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                  </svg>
+                </div>
+                <div class="skill-info">
+                  <h4 class="skill-name">Problem-Solving Algorithms</h4>
+                  <p class="skill-context">Systematic algorithmic decomposition &amp; optimization</p>
+                </div>
+                <span class="skill-badge">Core Academic</span>
+              </div>
+
+              <!-- Backtracking Algorithms -->
+              <div class="skill-card">
+                <div class="skill-icon-box">
+                  <svg viewBox="0 0 24 24" class="skill-svg" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 14 4 9 9 4"></polyline>
+                    <path d="M20 20v-7a4 4 0 0 0-4-4H4"></path>
+                  </svg>
+                </div>
+                <div class="skill-info">
+                  <h4 class="skill-name">Backtracking Algorithms</h4>
+                  <p class="skill-context">Recursive state exploration (8-Queen Simulator)</p>
+                </div>
+                <span class="skill-badge">Project Verified</span>
+              </div>
+
+              <!-- Graph Coloring Algorithms -->
+              <div class="skill-card">
+                <div class="skill-icon-box">
+                  <svg viewBox="0 0 24 24" class="skill-svg" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="18" cy="5" r="3"></circle>
+                    <circle cx="6" cy="12" r="3"></circle>
+                    <circle cx="18" cy="19" r="3"></circle>
+                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                  </svg>
+                </div>
+                <div class="skill-info">
+                  <h4 class="skill-name">Graph Coloring Algorithms</h4>
+                  <p class="skill-context">Adjacency constraints (Map Coloring Simulator)</p>
+                </div>
+                <span class="skill-badge">Project Verified</span>
+              </div>
+
+              <!-- Constraint Satisfaction Concepts -->
+              <div class="skill-card">
+                <div class="skill-icon-box">
+                  <svg viewBox="0 0 24 24" class="skill-svg" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z"></path>
+                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                  </svg>
+                </div>
+                <div class="skill-info">
+                  <h4 class="skill-name">Constraint Satisfaction</h4>
+                  <p class="skill-context">CSP formulation, variables, domains &amp; consistency</p>
+                </div>
+                <span class="skill-badge">Project Verified</span>
+              </div>
+
+              <!-- Retrieval-Augmented Generation (RAG) -->
+              <div class="skill-card">
+                <div class="skill-icon-box">
+                  <svg viewBox="0 0 24 24" class="skill-svg" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                  </svg>
+                </div>
+                <div class="skill-info">
+                  <h4 class="skill-name">Retrieval-Augmented Gen. (RAG)</h4>
+                  <p class="skill-context">Document retrieval + context-aware LLM generation</p>
+                </div>
+                <span class="skill-badge">Project Verified</span>
+              </div>
+
+              <!-- OCR & Speech Recognition Concepts -->
+              <div class="skill-card">
+                <div class="skill-icon-box">
+                  <svg viewBox="0 0 24 24" class="skill-svg" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+                    <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                    <line x1="12" y1="19" x2="12" y2="22"></line>
+                  </svg>
+                </div>
+                <div class="skill-info">
+                  <h4 class="skill-name">OCR &amp; Speech Recognition</h4>
+                  <p class="skill-context">Applied in Digital Notes Converter pipeline</p>
+                </div>
+                <span class="skill-badge">Project Verified</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: Professional Skills -->
+          <div class="skill-category-block" data-category-group="professional">
+            <div class="category-title-strip">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+              <h3>Professional Skills</h3>
+              <span class="category-count">3 Skills</span>
+            </div>
+
+            <div class="skills-grid">
+              <!-- Microsoft Office -->
+              <div class="skill-card">
+                <div class="skill-icon-box">
+                  <svg viewBox="0 0 24 24" class="skill-svg" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                    <line x1="3" y1="9" x2="21" y2="9"></line>
+                    <line x1="9" y1="21" x2="9" y2="9"></line>
+                  </svg>
+                </div>
+                <div class="skill-info">
+                  <h4 class="skill-name">Microsoft Office</h4>
+                  <p class="skill-context">Documentation, academic reporting, presentations &amp; spreadsheets</p>
+                </div>
+                <span class="skill-badge">Proficient</span>
+              </div>
+
+              <!-- Communication Skills -->
+              <div class="skill-card">
+                <div class="skill-icon-box">
+                  <svg viewBox="0 0 24 24" class="skill-svg" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="skill-info">
+                  <h4 class="skill-name">Communication Skills</h4>
+                  <p class="skill-context">Technical presentations, clear documentation, &amp; ideas articulation</p>
+                </div>
+                <span class="skill-badge">Demonstrated</span>
+              </div>
+
+              <!-- Team Collaboration -->
+              <div class="skill-card">
+                <div class="skill-icon-box">
+                  <svg viewBox="0 0 24 24" class="skill-svg" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="m4.93 4.93 4.24 4.24"></path>
+                    <path d="m14.83 9.17 4.24-4.24"></path>
+                    <path d="m14.83 14.83 4.24 4.24"></path>
+                    <path d="m9.17 14.83-4.24 4.24"></path>
+                    <circle cx="12" cy="12" r="4"></circle>
+                  </svg>
+                </div>
+                <div class="skill-info">
+                  <h4 class="skill-name">Team Collaboration</h4>
+                  <p class="skill-context">Academic group projects, hackathon/competition problem-solving</p>
+                </div>
+                <span class="skill-badge">Demonstrated</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FEATURED PROJECTS SECTION ==================== -->
+    <section id="projects" class="projects-section section-padding bg-alt" aria-labelledby="projects-heading">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header text-center">
+          <span class="section-eyebrow">Applied Portfolio</span>
+          <h2 id="projects-heading" class="section-title">Featured Projects</h2>
+          <div class="section-title-line" aria-hidden="true"></div>
+          <p class="section-subtitle">
+            Six verified academic and software projects demonstrating applied AI, algorithmic problem-solving, and
+            educational solutions.
+          </p>
+        </div>
+
+        <!-- Project Filter Controls -->
+        <div class="project-filter-bar" role="tablist" aria-label="Project Filtering">
+          <button class="project-filter-btn active" role="tab" aria-selected="true" data-filter="all">All (6)</button>
+          <button class="project-filter-btn" role="tab" aria-selected="false" data-filter="ai-rag">AI &amp; RAG</button>
+          <button class="project-filter-btn" role="tab" aria-selected="false" data-filter="simulators">Simulators &amp;
+            Algorithms</button>
+          <button class="project-filter-btn" role="tab" aria-selected="false" data-filter="edtech">Educational
+            Tools</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projectsGrid">
+
+          <!-- PROJECT 1: Digital Notes Converter -->
+          <article class="project-card" data-category="ai-rag edtech" data-project-id="notes-converter">
+            <div class="project-card-header">
+              <!-- Visual Domain Preview Graphic -->
+              <div class="project-preview-graphic preview-notes" aria-hidden="true">
+                <svg viewBox="0 0 200 110" class="graphic-svg" fill="none">
+                  <rect x="20" y="15" width="70" height="80" rx="6" fill="#131b2e" stroke="#38bdf8" stroke-width="1.5"
+                    stroke-dasharray="3 3" />
+                  <path d="M32 30h46M32 42h40M32 54h30" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" />
+                  <path d="M95 55h20" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" />
+                  <polygon points="112,50 122,55 112,60" fill="#38bdf8" />
+                  <rect x="125" y="15" width="55" height="80" rx="6" fill="#0d1424" stroke="#0078d4"
+                    stroke-width="1.5" />
+                  <path d="M137 30h32M137 40h28M137 50h20M137 60h26" stroke="#38bdf8" stroke-width="2"
+                    stroke-linecap="round" />
+                </svg>
+              </div>
+              <div class="project-badge-tag">AI Application</div>
+            </div>
+
+            <div class="project-card-body">
+              <h3 class="project-title">Digital Notes Converter</h3>
+              <p class="project-description">
+                Developed an AI-powered application that converts handwritten and voice notes into digital text using
+                OCR and speech recognition technologies. Built using Python and deployed with Streamlit.
+              </p>
+
+              <div class="project-tech-tags" aria-label="Technologies used">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Streamlit</span>
+                <span class="tech-tag">OCR</span>
+                <span class="tech-tag">Speech Recognition</span>
+              </div>
+            </div>
+
+            <div class="project-card-footer">
+              <button class="btn btn-primary btn-sm open-details-btn" data-project="notes-converter">
+                <span>View Details</span>
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </button>
+              <div class="project-links-group">
+                <button class="icon-link-btn repo-action" data-project="notes-converter" data-type="repo"
+                  title="View Source Repository">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+                  </svg>
+                </button>
+                <button class="icon-link-btn demo-action" data-project="notes-converter" data-type="demo"
+                  title="Explore Streamlit App">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: RAG-Based AI Assistant -->
+          <article class="project-card" data-category="ai-rag" data-project-id="rag-assistant">
+            <div class="project-card-header">
+              <!-- Visual Domain Preview Graphic -->
+              <div class="project-preview-graphic preview-rag" aria-hidden="true">
+                <svg viewBox="0 0 200 110" class="graphic-svg" fill="none">
+                  <circle cx="50" cy="55" r="28" fill="#131b2e" stroke="#38bdf8" stroke-width="1.5" />
+                  <path d="M42 45h16M42 53h16M42 61h10" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" />
+                  <line x1="82" y1="55" x2="118" y2="55" stroke="#0078d4" stroke-width="2" stroke-dasharray="4 3" />
+                  <circle cx="150" cy="55" r="28" fill="#0d1424" stroke="#06b6d4" stroke-width="1.5" />
+                  <path d="M142 47l8 8-8 8M158 47l-8 8 8 8" stroke="#06b6d4" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="project-badge-tag">LLM &amp; Retrieval</div>
+            </div>
+
+            <div class="project-card-body">
+              <h3 class="project-title">RAG-Based AI Assistant</h3>
+              <p class="project-description">
+                Developed a Retrieval-Augmented Generation (RAG) based AI system for intelligent document retrieval and
+                context-aware response generation.
+              </p>
+
+              <div class="project-tech-tags" aria-label="Technologies used">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">RAG</span>
+                <span class="tech-tag">Groq API</span>
+              </div>
+            </div>
+
+            <div class="project-card-footer">
+              <button class="btn btn-primary btn-sm open-details-btn" data-project="rag-assistant">
+                <span>View Details</span>
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </button>
+              <div class="project-links-group">
+                <button class="icon-link-btn repo-action" data-project="rag-assistant" data-type="repo"
+                  title="View Source Repository">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+                  </svg>
+                </button>
+                <button class="icon-link-btn demo-action" data-project="rag-assistant" data-type="demo"
+                  title="Explore Live Assistant">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3: 8-Queen Problem Simulator -->
+          <article class="project-card" data-category="simulators" data-project-id="eight-queen">
+            <div class="project-card-header">
+              <!-- Visual Domain Preview Graphic -->
+              <div class="project-preview-graphic preview-queen" aria-hidden="true">
+                <svg viewBox="0 0 200 110" class="graphic-svg" fill="none">
+                  <!-- Chessboard 4x4 sample grid -->
+                  <g transform="translate(60, 15)">
+                    <rect x="0" y="0" width="20" height="20" fill="#131b2e" />
+                    <rect x="20" y="0" width="20" height="20" fill="#1e293b" />
+                    <rect x="40" y="0" width="20" height="20" fill="#131b2e" />
+                    <rect x="60" y="0" width="20" height="20" fill="#1e293b" />
+
+                    <rect x="0" y="20" width="20" height="20" fill="#1e293b" />
+                    <rect x="20" y="20" width="20" height="20" fill="#131b2e" />
+                    <rect x="40" y="20" width="20" height="20" fill="#1e293b" />
+                    <rect x="60" y="20" width="20" height="20" fill="#131b2e" />
+
+                    <rect x="0" y="40" width="20" height="20" fill="#131b2e" />
+                    <rect x="20" y="40" width="20" height="20" fill="#1e293b" />
+                    <rect x="40" y="40" width="20" height="20" fill="#131b2e" />
+                    <rect x="60" y="40" width="20" height="20" fill="#1e293b" />
+
+                    <rect x="0" y="60" width="20" height="20" fill="#1e293b" />
+                    <rect x="20" y="60" width="20" height="20" fill="#131b2e" />
+                    <rect x="40" y="60" width="20" height="20" fill="#1e293b" />
+                    <rect x="60" y="60" width="20" height="20" fill="#131b2e" />
+
+                    <rect x="0" y="0" width="80" height="80" stroke="#38bdf8" stroke-width="1.5" fill="none" />
+
+                    <!-- Queens placed -->
+                    <circle cx="30" cy="10" r="5" fill="#38bdf8" />
+                    <circle cx="70" cy="30" r="5" fill="#38bdf8" />
+                    <circle cx="10" cy="50" r="5" fill="#38bdf8" />
+                    <circle cx="50" cy="70" r="5" fill="#38bdf8" />
+                  </g>
+                </svg>
+              </div>
+              <div class="project-badge-tag">Algorithm Simulator</div>
+            </div>
+
+            <div class="project-card-body">
+              <h3 class="project-title">8-Queen Problem Simulator</h3>
+              <p class="project-description">
+                Designed and implemented an intelligent graphical simulator for solving the 8-Queen problem using
+                backtracking algorithms and visualization techniques.
+              </p>
+
+              <div class="project-tech-tags" aria-label="Technologies used">
+                <span class="tech-tag">Algorithms</span>
+                <span class="tech-tag">Backtracking</span>
+                <span class="tech-tag">Problem Solving</span>
+                <span class="tech-tag">Visualization</span>
+              </div>
+            </div>
+
+            <div class="project-card-footer">
+              <button class="btn btn-primary btn-sm open-details-btn" data-project="eight-queen">
+                <span>View Details</span>
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </button>
+              <div class="project-links-group">
+                <button class="icon-link-btn repo-action" data-project="eight-queen" data-type="repo"
+                  title="View Source Repository">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+                  </svg>
+                </button>
+                <button class="icon-link-btn demo-action" data-project="eight-queen" data-type="demo"
+                  title="Run Simulator Demo">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 4: Map Coloring Problem Simulator -->
+          <article class="project-card" data-category="simulators" data-project-id="map-coloring">
+            <div class="project-card-header">
+              <!-- Visual Domain Preview Graphic -->
+              <div class="project-preview-graphic preview-map" aria-hidden="true">
+                <svg viewBox="0 0 200 110" class="graphic-svg" fill="none">
+                  <!-- Graph nodes with distinct constraint colors -->
+                  <circle cx="60" cy="35" r="14" fill="#0284c7" stroke="#38bdf8" stroke-width="2" />
+                  <circle cx="140" cy="35" r="14" fill="#06b6d4" stroke="#67e8f9" stroke-width="2" />
+                  <circle cx="100" cy="75" r="14" fill="#10b981" stroke="#34d399" stroke-width="2" />
+                  <circle cx="160" cy="85" r="12" fill="#8b5cf6" stroke="#c084fc" stroke-width="2" />
+
+                  <line x1="74" y1="35" x2="126" y2="35" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="3 3" />
+                  <line x1="70" y1="46" x2="90" y2="65" stroke="#94a3b8" stroke-width="1.5" />
+                  <line x1="130" y1="46" x2="110" y2="65" stroke="#94a3b8" stroke-width="1.5" />
+                  <line x1="114" y1="78" x2="148" y2="83" stroke="#94a3b8" stroke-width="1.5" />
+                </svg>
+              </div>
+              <div class="project-badge-tag">Graph AI &amp; CSP</div>
+            </div>
+
+            <div class="project-card-body">
+              <h3 class="project-title">Map Coloring Problem Simulator</h3>
+              <p class="project-description">
+                Created a graphical simulator demonstrating map coloring using graph coloring algorithms and constraint
+                satisfaction techniques.
+              </p>
+
+              <div class="project-tech-tags" aria-label="Technologies used">
+                <span class="tech-tag">Graph Algorithms</span>
+                <span class="tech-tag">Constraint Satisfaction</span>
+                <span class="tech-tag">Visualization</span>
+              </div>
+            </div>
+
+            <div class="project-card-footer">
+              <button class="btn btn-primary btn-sm open-details-btn" data-project="map-coloring">
+                <span>View Details</span>
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </button>
+              <div class="project-links-group">
+                <button class="icon-link-btn repo-action" data-project="map-coloring" data-type="repo"
+                  title="View Source Repository">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+                  </svg>
+                </button>
+                <button class="icon-link-btn demo-action" data-project="map-coloring" data-type="demo"
+                  title="Run Simulator Demo">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 5: Mentor AI — Personalized Learning Assistant -->
+          <article class="project-card" data-category="ai-rag edtech" data-project-id="mentor-ai">
+            <div class="project-card-header">
+              <!-- Visual Domain Preview Graphic -->
+              <div class="project-preview-graphic preview-mentor" aria-hidden="true">
+                <svg viewBox="0 0 200 110" class="graphic-svg" fill="none">
+                  <rect x="30" y="20" width="80" height="35" rx="6" fill="#131b2e" stroke="#38bdf8"
+                    stroke-width="1.5" />
+                  <path d="M42 32h56M42 42h40" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" />
+                  <rect x="90" y="55" width="80" height="35" rx="6" fill="#0d1424" stroke="#0078d4"
+                    stroke-width="1.5" />
+                  <path d="M102 67h56M102 77h42" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" />
+                  <circle cx="70" cy="55" r="8" fill="#06b6d4" />
+                  <path d="M68 55l2 2 3-3" stroke="#fff" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+              </div>
+              <div class="project-badge-tag">EdTech &amp; AI</div>
+            </div>
+
+            <div class="project-card-body">
+              <h3 class="project-title">Mentor AI &mdash; Personalized Learning Assistant</h3>
+              <p class="project-description">
+                Designed an AI-powered educational assistant that helps students learn programming and database concepts
+                through personalized guidance.
+              </p>
+
+              <div class="project-tech-tags" aria-label="Technologies used">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Groq API</span>
+                <span class="tech-tag">AI Assistant</span>
+              </div>
+            </div>
+
+            <div class="project-card-footer">
+              <button class="btn btn-primary btn-sm open-details-btn" data-project="mentor-ai">
+                <span>View Details</span>
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </button>
+              <div class="project-links-group">
+                <button class="icon-link-btn repo-action" data-project="mentor-ai" data-type="repo"
+                  title="View Source Repository">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+                  </svg>
+                </button>
+                <button class="icon-link-btn demo-action" data-project="mentor-ai" data-type="demo"
+                  title="Explore Mentor AI">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 6: AI-Powered Classroom Assistant -->
+          <article class="project-card" data-category="edtech" data-project-id="classroom-assistant">
+            <div class="project-card-header">
+              <!-- Visual Domain Preview Graphic -->
+              <div class="project-preview-graphic preview-classroom" aria-hidden="true">
+                <svg viewBox="0 0 200 110" class="graphic-svg" fill="none">
+                  <rect x="25" y="20" width="150" height="70" rx="8" fill="#131b2e" stroke="#38bdf8"
+                    stroke-width="1.5" />
+                  <rect x="35" y="32" width="35" height="46" rx="4" fill="#0d1424" stroke="#0078d4" stroke-width="1" />
+                  <path d="M42 42h20M42 50h20M42 58h14" stroke="#38bdf8" stroke-width="1.5" />
+                  <!-- Audio wave -->
+                  <path d="M85 55c2-6 4-6 6 0s4 6 6 0 4-6 6 0 4 6 6 0" stroke="#06b6d4" stroke-width="2"
+                    stroke-linecap="round" />
+                  <!-- Download indicator -->
+                  <circle cx="145" cy="55" r="14" fill="#0d1424" stroke="#10b981" stroke-width="1.5" />
+                  <path d="M145 49v10M141 55l4 4 4-4" stroke="#10b981" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="project-badge-tag">Smart Classroom</div>
+            </div>
+
+            <div class="project-card-body">
+              <h3 class="project-title">AI-Powered Classroom Assistant</h3>
+              <p class="project-description">
+                Created a smart classroom assistant that integrates attendance management, voice note generation, and
+                downloadable study material features.
+              </p>
+
+              <div class="project-tech-tags" aria-label="Technologies used">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">AI Integration</span>
+                <span class="tech-tag">Automation</span>
+              </div>
+            </div>
+
+            <div class="project-card-footer">
+              <button class="btn btn-primary btn-sm open-details-btn" data-project="classroom-assistant">
+                <span>View Details</span>
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </button>
+              <div class="project-links-group">
+                <button class="icon-link-btn repo-action" data-project="classroom-assistant" data-type="repo"
+                  title="View Source Repository">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+                  </svg>
+                </button>
+                <button class="icon-link-btn demo-action" data-project="classroom-assistant" data-type="demo"
+                  title="Explore Classroom Assistant">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ACHIEVEMENTS SECTION ==================== -->
+    <section id="achievements" class="achievements-section section-padding" aria-labelledby="achievements-heading">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header text-center">
+          <span class="section-eyebrow">Honors &amp; Recognition</span>
+          <h2 id="achievements-heading" class="section-title">Achievements</h2>
+          <div class="section-title-line" aria-hidden="true"></div>
+          <p class="section-subtitle">
+            Merit-based institutional recognition for academic excellence and competition participation.
+          </p>
+        </div>
+
+        <div class="achievements-grid">
+          <!-- Achievement 1: Third Position BSCS -->
+          <div class="achievement-card">
+            <div class="award-badge-icon">
+              <svg viewBox="0 0 24 24" class="award-svg" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="8" r="7"></circle>
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+              </svg>
+              <span class="award-rank-tag">3rd Position</span>
+            </div>
+            <div class="achievement-content">
+              <div class="achievement-type">Academic Merit Award</div>
+              <h3 class="achievement-title">Academic Excellence Award &mdash; Third Position (BSCS)</h3>
+              <p class="achievement-institution">University of Education Lahore, Multan Campus</p>
+              <div class="achievement-meta">
+                <span class="meta-tag">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
+                  Academic Year 2024&ndash;2025
+                </span>
+                <span class="meta-tag">Departmental Distinction</span>
+              </div>
+              <p class="achievement-detail">
+                Conferred for achieving 3rd position in academic performance among BSCS cohort, reflecting high marks
+                and dedication to computer science coursework.
+              </p>
+            </div>
+          </div>
+
+          <!-- Achievement 2: Second Position BSCS -->
+          <div class="achievement-card featured-award">
+            <div class="award-badge-icon">
+              <svg viewBox="0 0 24 24" class="award-svg text-cyan" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="8" r="7"></circle>
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+              </svg>
+              <span class="award-rank-tag rank-second">2nd Position</span>
+            </div>
+            <div class="achievement-content">
+              <div class="achievement-type">Academic Merit Award</div>
+              <h3 class="achievement-title">Academic Excellence Award &mdash; Second Position (BSCS)</h3>
+              <p class="achievement-institution">University of Education Lahore, Multan Campus</p>
+              <div class="achievement-meta">
+                <span class="meta-tag">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
+                  Academic Year 2025&ndash;2026
+                </span>
+                <span class="meta-tag">Departmental Distinction</span>
+              </div>
+              <p class="achievement-detail">
+                Awarded for ascending to 2nd position in academic standing across the computer science department,
+                affirming continuous academic improvement and mastery of CS fundamentals.
+              </p>
+            </div>
+          </div>
+
+          <!-- Achievement 3: Debug Code Competition -->
+          <div class="achievement-card">
+            <div class="award-badge-icon">
+              <svg viewBox="0 0 24 24" class="award-svg text-blue" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+              <span class="award-rank-tag rank-comp">Competition</span>
+            </div>
+            <div class="achievement-content">
+              <div class="achievement-type">Competitive Programming</div>
+              <h3 class="achievement-title">Debug Code Competition</h3>
+              <p class="achievement-institution">COMSATS University Islamabad, Wah Campus</p>
+              <div class="achievement-meta">
+                <span class="meta-tag">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
+                  VISIO Spark &bull; November 2025
+                </span>
+                <span class="meta-tag">Inter-University Event</span>
+              </div>
+              <p class="achievement-detail">
+                Participated in the competitive debugging event at VISIO Spark, solving code anomalies, optimizing
+                algorithmic complexity, and testing rapid problem identification skills.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== INTERESTS & LANGUAGES SECTION ==================== -->
+    <section class="secondary-info-section section-padding bg-alt" aria-label="Interests and Languages">
+      <div class="container">
+        <div class="two-col-grid">
+
+          <!-- Interests Sub-section -->
+          <div class="interests-container" id="interests">
+            <div class="sub-section-header">
+              <div class="header-icon-box">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                  </polygon>
+                </svg>
+              </div>
+              <div>
+                <h3 class="sub-section-title">Areas of Interest</h3>
+                <p class="sub-section-subtitle">Long-term research and software development passions</p>
+              </div>
+            </div>
+
+            <div class="interests-tags-grid">
+              <!-- Interest 1 -->
+              <div class="interest-card">
+                <div class="interest-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M12 2a8 8 0 0 0-8 8c0 3.3 2 6.2 5 7.4V20a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2.6c3-1.2 5-4.1 5-7.4a8 8 0 0 0-8-8z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="interest-body">
+                  <h4 class="interest-name">Artificial Intelligence</h4>
+                  <p class="interest-note">Intelligent systems, heuristics, and reasoning</p>
+                </div>
+              </div>
+
+              <!-- Interest 2 -->
+              <div class="interest-card">
+                <div class="interest-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                    </path>
+                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                  </svg>
+                </div>
+                <div class="interest-body">
+                  <h4 class="interest-name">Machine Learning</h4>
+                  <p class="interest-note">Predictive algorithms, data models, and inference</p>
+                </div>
+              </div>
+
+              <!-- Interest 3 -->
+              <div class="interest-card">
+                <div class="interest-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="20" x2="18" y2="10"></line>
+                    <line x1="12" y1="20" x2="12" y2="4"></line>
+                    <line x1="6" y1="20" x2="6" y2="14"></line>
+                  </svg>
+                </div>
+                <div class="interest-body">
+                  <h4 class="interest-name">Data Science</h4>
+                  <p class="interest-note">Statistical analysis, query optimization, &amp; data pipelines</p>
+                </div>
+              </div>
+
+              <!-- Interest 4 -->
+              <div class="interest-card">
+                <div class="interest-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <div class="interest-body">
+                  <h4 class="interest-name">Software Development</h4>
+                  <p class="interest-note">Full-stack web architecture, clean code, &amp; automation</p>
+                </div>
+              </div>
+
+              <!-- Interest 5 -->
+              <div class="interest-card">
+                <div class="interest-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"></path>
+                    <polyline points="10 2 10 10 13 7 16 10 16 2"></polyline>
+                  </svg>
+                </div>
+                <div class="interest-body">
+                  <h4 class="interest-name">Educational Technology</h4>
+                  <p class="interest-note">Interactive simulators and AI-guided learning tools</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Languages Sub-section -->
+          <div class="languages-container" id="languages">
+            <div class="sub-section-header">
+              <div class="header-icon-box">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                  </path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="sub-section-title">Languages</h3>
+                <p class="sub-section-subtitle">Communication proficiency across multilingual environments</p>
+              </div>
+            </div>
+
+            <div class="languages-list">
+              <!-- English -->
+              <div class="language-card">
+                <div class="lang-top">
+                  <div class="lang-name-group">
+                    <span class="lang-flag" aria-hidden="true">🌐</span>
+                    <h4 class="lang-name">English</h4>
+                  </div>
+                  <span class="lang-badge badge-blue">Professional Working Proficiency</span>
+                </div>
+                <p class="lang-desc">Technical documentation, academic literature, engineering collaboration, and
+                  presentation delivery.</p>
+              </div>
+
+              <!-- Urdu -->
+              <div class="language-card">
+                <div class="lang-top">
+                  <div class="lang-name-group">
+                    <span class="lang-flag" aria-hidden="true">🇵🇰</span>
+                    <h4 class="lang-name">Urdu</h4>
+                  </div>
+                  <span class="lang-badge badge-cyan">Native Proficiency</span>
+                </div>
+                <p class="lang-desc">Complete native fluency in spoken, written, and technical academic communication.
+                </p>
+              </div>
+
+              <!-- Saraiki -->
+              <div class="language-card">
+                <div class="lang-top">
+                  <div class="lang-name-group">
+                    <span class="lang-flag" aria-hidden="true">🗣️</span>
+                    <h4 class="lang-name">Saraiki</h4>
+                  </div>
+                  <span class="lang-badge badge-neutral">Elementary Proficiency</span>
+                </div>
+                <p class="lang-desc">Regional language spoken across South Punjab, Pakistan.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section id="contact" class="contact-section section-padding" aria-labelledby="contact-heading">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header text-center">
+          <span class="section-eyebrow">Get In Touch</span>
+          <h2 id="contact-heading" class="section-title">Contact</h2>
+          <div class="section-title-line" aria-hidden="true"></div>
+          <p class="section-subtitle">
+            Open for machine learning internships, academic research inquiries, hackathon teams, and software
+            collaborations.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left Column: Contact Cards -->
+          <div class="contact-info-column">
+            <div class="contact-card-main">
+              <h3 class="contact-heading">Direct Contact Information</h3>
+              <p class="contact-lead">
+                Feel free to reach out directly via email or phone. I respond promptly to internship opportunities,
+                academic discussions, and technical inquiries.
+              </p>
+
+              <div class="contact-methods-list">
+                <!-- Email Item -->
+                <div class="contact-method-item">
+                  <div class="method-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                  </div>
+                  <div class="method-content">
+                    <span class="method-label">Email Address</span>
+                    <a href="mailto:shoaibbhatti1838@gmail.com"
+                      class="method-value method-link">shoaibbhatti1838@gmail.com</a>
+                  </div>
+                  <button id="copyEmailBtn" class="copy-btn" title="Copy email address to clipboard"
+                    aria-label="Copy email address">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                  </button>
+                </div>
+
+                <!-- Phone Item -->
+                <div class="contact-method-item">
+                  <div class="method-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                      </path>
+                    </svg>
+                  </div>
+                  <div class="method-content">
+                    <span class="method-label">Phone &amp; WhatsApp</span>
+                    <a href="tel:03043952011" class="method-value method-link">03043952011</a>
+                  </div>
+                </div>
+
+                <!-- Location Item -->
+                <div class="contact-method-item">
+                  <div class="method-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                  </div>
+                  <div class="method-content">
+                    <span class="method-label">Current Location</span>
+                    <span class="method-value">Muzaffargarh, Punjab, Pakistan</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Professional Network Links -->
+              <div class="social-links-block">
+                <h4 class="social-heading">Professional Profiles</h4>
+                <div class="social-buttons-grid">
+                  <!-- GitHub Link Placeholder -->
+                  <a href="https://github.com/MuhammadShoaib" target="_blank" rel="noopener noreferrer"
+                    class="social-btn github-btn" id="githubProfileLink">
+                    <svg viewBox="0 0 24 24" class="social-icon" fill="currentColor">
+                      <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+                    </svg>
+                    <span>GitHub Profile</span>
+                  </a>
+
+                  <!-- LinkedIn Link Placeholder -->
+                  <a href="https://linkedin.com/in/muhammad-shoaib" target="_blank" rel="noopener noreferrer"
+                    class="social-btn linkedin-btn" id="linkedinProfileLink">
+                    <svg viewBox="0 0 24 24" class="social-icon" fill="currentColor">
+                      <path
+                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                    <span>LinkedIn Profile</span>
+                  </a>
+                </div>
+                <p class="social-note">Placeholders configured in script.js &bull; Ready for your official URL links</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Contact Form -->
+          <div class="contact-form-column">
+            <div class="form-card">
+              <h3 class="form-title">Send a Direct Message</h3>
+              <p class="form-subtitle">Fill in the details below to compose a direct inquiry.</p>
+
+              <!-- Form Status Notice Container -->
+              <div id="formStatusNotice" class="form-status-notice" role="alert" aria-live="polite"
+                style="display: none;"></div>
+
+              <form id="portfolioContactForm" class="portfolio-form" novalidate>
+                <!-- Name Field -->
+                <div class="form-group">
+                  <label for="senderName" class="form-label">Full Name <span class="required-star">*</span></label>
+                  <input type="text" id="senderName" name="name" class="form-input"
+                    placeholder="e.g. John Doe or Dr. Sarah Ahmad" required autocomplete="name">
+                  <span class="field-error" id="nameError" aria-live="polite"></span>
+                </div>
+
+                <!-- Email Field -->
+                <div class="form-group">
+                  <label for="senderEmail" class="form-label">Email Address <span class="required-star">*</span></label>
+                  <input type="email" id="senderEmail" name="email" class="form-input"
+                    placeholder="e.g. contact@example.com" required autocomplete="email">
+                  <span class="field-error" id="emailError" aria-live="polite"></span>
+                </div>
+
+                <!-- Subject Field -->
+                <div class="form-group">
+                  <label for="senderSubject" class="form-label">Subject <span class="required-star">*</span></label>
+                  <input type="text" id="senderSubject" name="subject" class="form-input"
+                    placeholder="e.g. Machine Learning Internship Inquiry / Project Collaboration" required>
+                  <span class="field-error" id="subjectError" aria-live="polite"></span>
+                </div>
+
+                <!-- Message Field -->
+                <div class="form-group">
+                  <label for="senderMessage" class="form-label">Message <span class="required-star">*</span></label>
+                  <textarea id="senderMessage" name="message" class="form-textarea" rows="5"
+                    placeholder="Share your message, project idea, or internship details..." required></textarea>
+                  <span class="field-error" id="messageError" aria-live="polite"></span>
+                </div>
+
+                <!-- Form Action Buttons -->
+                <div class="form-actions-row">
+                  <button type="submit" class="btn btn-primary btn-block">
+                    <span>Send Message (Client Demo)</span>
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                      <line x1="22" y1="2" x2="11" y2="13"></line>
+                      <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                  </button>
+
+                  <button type="button" id="mailClientFallbackBtn" class="btn btn-secondary btn-block">
+                    <span>Open in Email App (mailto)</span>
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="form-transparency-note">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                  </svg>
+                  <span>This client-side portfolio verifies form inputs in-browser and prepares your message directly
+                    for <code>shoaibbhatti1838@gmail.com</code> without unverified third-party trackers.</span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <!-- Brand & Bio -->
+        <div class="footer-brand-col">
+          <div class="brand-logo footer-logo">
+            <div class="logo-symbol" aria-hidden="true"><span class="logo-accent">MS</span></div>
+            <div class="logo-text">
+              <span class="logo-name">Muhammad Shoaib</span>
+              <span class="logo-tagline">Aspiring Machine Learning Engineer</span>
+            </div>
+          </div>
+          <p class="footer-bio-text">
+            BSCS student at University of Education Lahore, Multan Campus. Dedicated to building reliable AI solutions,
+            intelligent algorithmic simulators, and educational software.
+          </p>
+          <div class="footer-meta-pill">
+            <span class="meta-dot"></span>
+            <span>Muzaffargarh, Punjab, Pakistan &bull; CGPA 3.86/4.00</span>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-nav-col">
+          <h4 class="footer-heading">Quick Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Profile</a></li>
+            <li><a href="#education">Education &amp; Scores</a></li>
+            <li><a href="#skills">Technical Skills</a></li>
+            <li><a href="#projects">Featured Projects</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#contact">Contact Details</a></li>
+          </ul>
+        </div>
+
+        <!-- Direct Contact Column -->
+        <div class="footer-contact-col">
+          <h4 class="footer-heading">Direct Inquiries</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <span class="f-contact-label">Email:</span>
+              <a href="mailto:shoaibbhatti1838@gmail.com" class="f-contact-link">shoaibbhatti1838@gmail.com</a>
+            </li>
+            <li>
+              <span class="f-contact-label">Phone:</span>
+              <a href="tel:03043952011" class="f-contact-link">03043952011</a>
+            </li>
+            <li>
+              <span class="f-contact-label">University:</span>
+              <span class="f-contact-text">University of Education Lahore (Multan)</span>
+            </li>
+          </ul>
+
+          <div class="footer-social-strip">
+            <a href="https://github.com/MuhammadShoaib" target="_blank" rel="noopener noreferrer"
+              class="footer-social-icon" aria-label="GitHub Profile">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+            </a>
+            <a href="https://linkedin.com/in/muhammad-shoaib" target="_blank" rel="noopener noreferrer"
+              class="footer-social-icon" aria-label="LinkedIn Profile">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright-text">
+          &copy; <span id="currentYear">2026</span> Muhammad Shoaib. All rights reserved. Built with semantic HTML5,
+          CSS3, and modern vanilla JavaScript.
+        </p>
+        <p class="footer-statement">
+          Truthful academic and technical portfolio &bull; Aspiring Machine Learning Engineer.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== PROJECT DETAILS MODAL ==================== -->
+  <div id="projectModal" class="portfolio-modal" role="dialog" aria-modal="true" aria-labelledby="modalProjectTitle"
+    aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title-wrap">
+            <span class="badge-pill badge-primary" id="modalProjectCategory">AI System</span>
+            <h3 id="modalProjectTitle" class="modal-title">Project Title</h3>
+          </div>
+          <button id="modalCloseBtn" class="modal-close-btn" aria-label="Close project details">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <div class="modal-body" id="modalBody">
+          <!-- Populated dynamically by script.js -->
+        </div>
+
+        <div class="modal-footer" id="modalFooter">
+          <!-- Action buttons injected dynamically -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== CV DOWNLOAD / NOTICE MODAL ==================== -->
+  <div id="cvNoticeModal" class="portfolio-modal" role="dialog" aria-modal="true" aria-labelledby="cvModalTitle"
+    aria-hidden="true">
+    <div class="modal-backdrop" id="cvModalBackdrop"></div>
+    <div class="modal-dialog modal-dialog-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title-wrap">
+            <span class="badge-pill badge-neutral">Curriculum Vitae</span>
+            <h3 id="cvModalTitle" class="modal-title">Muhammad Shoaib's CV</h3>
+          </div>
+          <button id="cvModalCloseBtn" class="modal-close-btn" aria-label="Close CV notice">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <div class="cv-status-box">
+            <div class="cv-icon-circle">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <h4 class="cv-notice-heading">Official Curriculum Vitae</h4>
+            <p class="cv-notice-text">
+              All credentials on this portfolio match Muhammad Shoaib's official CV (BSCS Student at University of
+              Education Lahore, CGPA 3.86/4.00, 6 verified projects, 2 academic awards).
+            </p>
+            <div class="cv-file-instruction">
+              <span class="file-code">assets/Muhammad_Shoaib_CV.pdf</span>
+              <p class="file-tip">
+                To link a direct PDF file, place your CV document into the <code>portfolio/assets/</code> directory with
+                the filename above.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button id="tryDirectDownloadBtn" class="btn btn-primary btn-sm">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span>Download PDF</span>
+          </button>
+          <button id="printCvViewBtn" class="btn btn-secondary btn-sm">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 6 2 18 2 18 9"></polyline>
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+              <rect x="6" y="14" width="12" height="8"></rect>
+            </svg>
+            <span>Print / Save Web CV</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container for Clipboard & Interactions -->
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+  <!-- Scroll to Top Floating Button -->
+  <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top of page" title="Scroll to top">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Vanilla JavaScript -->
+  <script src="script.js"></script>
+</body>
+
+</html>

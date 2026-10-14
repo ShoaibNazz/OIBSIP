@@ -1,0 +1,16 @@
+====================================================================
+PROJECT SCREENSHOTS DIRECTORY
+Oasis Infobyte Web Development Internship - Level 2 Task 4
+====================================================================
+
+You can place your project demonstration screenshots in this folder
+for your GitHub repository presentation and submission review:
+
+Recommended Screenshots:
+1. 01-login-page-desktop.png        - Modern Microsoft-inspired login card
+2. 02-inline-validation-errors.png - Dynamic error indicators & alerts
+3. 03-registration-page.png        - Registration form with password strength meter
+4. 04-protected-dashboard.png       - Authenticated dashboard with user profile
+5. 05-security-audit-modal.png     - LocalStorage inspector showing salted SHA-256 hashes
+6. 06-mobile-responsive-view.png   - Mobile responsive layout
+====================================================================

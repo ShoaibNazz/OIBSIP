@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Smart To-Do Web App - Modern, accessible, responsive productivity dashboard with instant persistence.">
+  <title>Smart To-Do | Productivity Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- App Container -->
+  <div class="app-layout">
+    
+    <!-- Top Header -->
+    <header class="dashboard-header" role="banner">
+      <div class="header-container">
+        <div class="brand-row">
+          <div class="brand-identity">
+            <div class="brand-icon-wrapper" aria-hidden="true">
+              <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                <circle cx="12" cy="12" r="3.5"/>
+              </svg>
+            </div>
+            <div>
+              <h1 class="brand-title">Smart To-Do</h1>
+              <p class="brand-subtitle">Plan your priorities, stay focused, and achieve your daily goals.</p>
+            </div>
+          </div>
+
+          <!-- Overall Progress Overview Pill -->
+          <div class="header-stats" aria-label="Productivity summary" role="region">
+            <div class="stat-pill">
+              <span class="stat-label">Total</span>
+              <span id="total-stat" class="stat-value">0</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-pill">
+              <span class="stat-label">Done</span>
+              <span id="rate-stat" class="stat-value">0%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Overall Progress Bar -->
+        <div class="progress-track" role="progressbar" aria-label="Task completion progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+          <div id="progress-bar-fill" class="progress-fill" style="width: 0%;"></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="dashboard-main" role="main">
+      <div class="main-container">
+
+        <!-- Task Input Creation Card -->
+        <section class="card entry-card" aria-labelledby="new-task-heading">
+          <div class="card-header">
+            <h2 id="new-task-heading" class="section-title">
+              <svg class="heading-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 5v14M5 12h14"/>
+              </svg>
+              Create New Task
+            </h2>
+            <span class="card-hint">Press <kbd>Enter</kbd> to add quickly</span>
+          </div>
+
+          <form id="task-form" class="task-form" novalidate>
+            <div class="input-row">
+              <div class="input-wrapper">
+                <label for="task-input" class="visually-hidden">Task description</label>
+                <input 
+                  type="text" 
+                  id="task-input" 
+                  name="taskDescription"
+                  class="task-text-input" 
+                  placeholder="e.g., Review project proposal by 3 PM..." 
+                  maxlength="200"
+                  autocomplete="off"
+                  aria-describedby="form-feedback input-char-counter"
+                  required
+                >
+                <span id="input-char-counter" class="char-counter" aria-hidden="true">0/200</span>
+              </div>
+              <button type="submit" id="add-task-btn" class="btn btn-primary btn-add">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 5v14M5 12h14"/>
+                </svg>
+                <span>Add Task</span>
+              </button>
+            </div>
+
+            <!-- Feedback / Validation Message Banner -->
+            <div id="form-feedback" class="feedback-banner" role="alert" aria-live="polite" hidden></div>
+          </form>
+        </section>
+
+        <!-- Utility Toolbar: Search & Filter -->
+        <section class="toolbar-section" aria-label="Search and filter tasks">
+          <div class="search-box">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <label for="search-input" class="visually-hidden">Search tasks</label>
+            <input 
+              type="search" 
+              id="search-input" 
+              class="search-input" 
+              placeholder="Search tasks..." 
+              autocomplete="off"
+            >
+            <button type="button" id="clear-search-btn" class="clear-search-btn" aria-label="Clear search query" hidden>
+              &times;
+            </button>
+          </div>
+
+          <div class="toolbar-actions">
+            <button type="button" id="export-tasks-btn" class="btn btn-ghost btn-sm" title="Export tasks to JSON backup file">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              <span>Export</span>
+            </button>
+            <label for="import-tasks-file" class="btn btn-ghost btn-sm" title="Import tasks from JSON file" tabindex="0">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="17 8 12 3 7 8"/>
+                <line x1="12" y1="3" x2="12" y2="15"/>
+              </svg>
+              <span>Import</span>
+              <input type="file" id="import-tasks-file" accept=".json" class="visually-hidden">
+            </label>
+            <button type="button" id="clear-completed-btn" class="btn btn-ghost btn-sm" title="Remove all completed tasks">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+              </svg>
+              <span>Clear Completed</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- Two Column Dashboard Grid for Pending & Completed Tasks -->
+        <div class="dashboard-grid">
+          
+          <!-- Column 1: Pending Tasks -->
+          <section class="card list-card pending-card" aria-labelledby="pending-heading">
+            <div class="list-card-header">
+              <div class="list-title-group">
+                <span class="status-indicator status-indicator-pending" aria-hidden="true"></span>
+                <h2 id="pending-heading" class="list-heading">Pending Tasks</h2>
+              </div>
+              <div class="counter-badge counter-badge-pending" aria-label="Pending task count">
+                <span id="pending-counter" aria-live="polite">0 pending</span>
+              </div>
+            </div>
+
+            <!-- Task List -->
+            <ul id="pending-list" class="task-items-list" aria-label="Pending tasks list">
+              <!-- Rendered dynamically by script.js -->
+            </ul>
+
+            <!-- Friendly Empty State for Pending Tasks -->
+            <div id="pending-empty" class="empty-state" aria-live="polite">
+              <div class="empty-state-graphic" aria-hidden="true">
+                <svg viewBox="0 0 80 80" fill="none" class="empty-illustration">
+                  <circle cx="40" cy="40" r="36" fill="#eff6ff" stroke="#bfdbfe" stroke-width="2" stroke-dasharray="4 4"/>
+                  <rect x="26" y="24" width="28" height="34" rx="4" fill="#ffffff" stroke="#3b82f6" stroke-width="2"/>
+                  <line x1="32" y1="32" x2="48" y2="32" stroke="#93c5fd" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="32" y1="40" x2="44" y2="40" stroke="#93c5fd" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="32" y1="48" x2="40" y2="48" stroke="#93c5fd" stroke-width="2" stroke-linecap="round"/>
+                  <circle cx="54" cy="52" r="10" fill="#3b82f6"/>
+                  <path d="M50 52l3 3 6-6" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3 class="empty-title">All caught up!</h3>
+              <p class="empty-description">You have no pending tasks on your plate. Enjoy your free time or add a new task above to stay productive.</p>
+            </div>
+          </section>
+
+          <!-- Column 2: Completed Tasks -->
+          <section class="card list-card completed-card" aria-labelledby="completed-heading">
+            <div class="list-card-header">
+              <div class="list-title-group">
+                <span class="status-indicator status-indicator-completed" aria-hidden="true"></span>
+                <h2 id="completed-heading" class="list-heading">Completed Tasks</h2>
+              </div>
+              <div class="counter-badge counter-badge-completed" aria-label="Completed task count">
+                <span id="completed-counter" aria-live="polite">0 completed</span>
+              </div>
+            </div>
+
+            <!-- Completed Task List -->
+            <ul id="completed-list" class="task-items-list" aria-label="Completed tasks list">
+              <!-- Rendered dynamically by script.js -->
+            </ul>
+
+            <!-- Friendly Empty State for Completed Tasks -->
+            <div id="completed-empty" class="empty-state" aria-live="polite">
+              <div class="empty-state-graphic" aria-hidden="true">
+                <svg viewBox="0 0 80 80" fill="none" class="empty-illustration">
+                  <circle cx="40" cy="40" r="36" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="2" stroke-dasharray="4 4"/>
+                  <path d="M40 18l5.5 13.5 14.5 1.2-11 9.5 3.3 14.3L40 49l-12.3 7.5 3.3-14.3-11-9.5 14.5-1.2L40 18z" fill="#86efac" stroke="#16a34a" stroke-width="2" stroke-linejoin="round"/>
+                  <circle cx="40" cy="38" r="7" fill="#ffffff"/>
+                  <path d="M37 38l2 2 4-4" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3 class="empty-title">No completed tasks yet</h3>
+              <p class="empty-description">When you complete tasks from your pending list, they will appear here with completion timestamps to track your momentum.</p>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="dashboard-footer" role="contentinfo">
+      <div class="footer-container">
+        <p>Smart To-Do &bull; Built with semantic HTML5, CSS3 &amp; Vanilla JavaScript &bull; All data saved locally in your browser</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Accessible Delete Confirmation Modal -->
+  <div id="delete-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc" hidden>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-icon-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+            <line x1="10" y1="11" x2="10" y2="17"/>
+            <line x1="14" y1="11" x2="14" y2="17"/>
+          </svg>
+        </div>
+        <div>
+          <h2 id="modal-title" class="modal-title">Delete Task</h2>
+          <p id="modal-desc" class="modal-desc">Are you sure you want to delete this task? This action cannot be undone.</p>
+        </div>
+      </div>
+
+      <div class="modal-task-preview">
+        <span class="preview-label">Target task:</span>
+        <blockquote id="modal-task-name" class="preview-text">Task title preview</blockquote>
+      </div>
+
+      <div class="modal-actions">
+        <button type="button" id="modal-cancel-btn" class="btn btn-secondary">Cancel</button>
+        <button type="button" id="modal-confirm-btn" class="btn btn-danger">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+          </svg>
+          <span>Delete Permanently</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Accessible Toast Notification Container -->
+  <div id="toast-region" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>

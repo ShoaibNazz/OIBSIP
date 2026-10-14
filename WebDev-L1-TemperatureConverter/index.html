@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Convert temperatures between Celsius, Fahrenheit and Kelvin with instant live preview, formula steps, and presets.">
+  <title>Smart Temperature Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="panel" aria-labelledby="page-title">
+      <header class="panel-header">
+        <h1 id="page-title">Temperature Converter</h1>
+        <p class="intro">
+          Enter a temperature to see instant conversions across Celsius, Fahrenheit, and Kelvin with step-by-step formulas.
+        </p>
+      </header>
+
+      <!-- Quick Preset Buttons -->
+      <div class="presets" aria-label="Common temperature presets">
+        <span class="presets-label">Presets:</span>
+        <button type="button" class="preset-btn" data-val="0" data-unit="celsius">0°C Freezing</button>
+        <button type="button" class="preset-btn" data-val="21" data-unit="celsius">21°C Room</button>
+        <button type="button" class="preset-btn" data-val="37" data-unit="celsius">37°C Body</button>
+        <button type="button" class="preset-btn" data-val="100" data-unit="celsius">100°C Boiling</button>
+        <button type="button" class="preset-btn" data-val="0" data-unit="kelvin">0 K Abs. Zero</button>
+      </div>
+
+      <form id="converter-form" novalidate>
+        <div class="form-row">
+          <div class="field field-value">
+            <label for="temperature">Temperature</label>
+            <input
+              id="temperature"
+              name="temperature"
+              type="text"
+              inputmode="decimal"
+              autocomplete="off"
+              placeholder="e.g. 36.6 or -40"
+              aria-describedby="error-message"
+              aria-invalid="false">
+          </div>
+
+          <div class="field field-unit">
+            <div class="unit-label-row">
+              <label for="unit">Input unit</label>
+              <button type="button" id="swap-unit-btn" class="swap-unit-btn" title="Swap between Celsius and Fahrenheit" aria-label="Swap units">
+                ⇄ Swap °C / °F
+              </button>
+            </div>
+            <select id="unit" name="unit">
+              <option value="celsius">Celsius (°C)</option>
+              <option value="fahrenheit">Fahrenheit (°F)</option>
+              <option value="kelvin">Kelvin (K)</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="error-message" class="error" role="alert" aria-live="assertive" hidden></div>
+
+        <div class="actions">
+          <button type="submit" class="btn btn-primary" id="convert-btn">Convert</button>
+          <button type="button" class="btn btn-secondary" id="reset-btn">Reset</button>
+        </div>
+      </form>
+
+      <!-- Visual Temperature Status Meter -->
+      <div id="temp-indicator" class="temp-indicator" hidden aria-live="polite">
+        <div class="temp-indicator-track">
+          <div id="temp-indicator-fill" class="temp-indicator-fill"></div>
+        </div>
+        <div class="temp-indicator-meta">
+          <span id="temp-indicator-label" class="temp-indicator-label">Comfortable temperature</span>
+        </div>
+      </div>
+
+      <!-- Results Grid -->
+      <section class="results" aria-label="Conversion results" aria-live="polite">
+        <article class="card" id="card-celsius">
+          <div class="card-top">
+            <h2 class="card-label">Celsius</h2>
+            <button type="button" class="btn-copy-card" data-target="result-celsius" aria-label="Copy Celsius value" title="Copy value">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            </button>
+          </div>
+          <p class="card-value"><output id="result-celsius" for="temperature unit">—</output><span class="card-unit">°C</span></p>
+          <p class="card-formula" id="formula-celsius">Direct input</p>
+        </article>
+
+        <article class="card" id="card-fahrenheit">
+          <div class="card-top">
+            <h2 class="card-label">Fahrenheit</h2>
+            <button type="button" class="btn-copy-card" data-target="result-fahrenheit" aria-label="Copy Fahrenheit value" title="Copy value">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            </button>
+          </div>
+          <p class="card-value"><output id="result-fahrenheit" for="temperature unit">—</output><span class="card-unit">°F</span></p>
+          <p class="card-formula" id="formula-fahrenheit">(°C × 9/5) + 32</p>
+        </article>
+
+        <article class="card" id="card-kelvin">
+          <div class="card-top">
+            <h2 class="card-label">Kelvin</h2>
+            <button type="button" class="btn-copy-card" data-target="result-kelvin" aria-label="Copy Kelvin value" title="Copy value">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            </button>
+          </div>
+          <p class="card-value"><output id="result-kelvin" for="temperature unit">—</output><span class="card-unit">K</span></p>
+          <p class="card-formula" id="formula-kelvin">°C + 273.15</p>
+        </article>
+      </section>
+
+      <p class="note">Lowest possible values: −273.15 °C, −459.67 °F and 0 K (absolute zero).</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
